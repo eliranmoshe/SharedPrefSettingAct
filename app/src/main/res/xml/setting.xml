@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <SwitchPreference
-        android:defaultValue="false"
-        android:title="WITH TUTORIAL"
-        android:key="with_tutorial" />
     <EditTextPreference
-        android:defaultValue="white"
+        android:defaultValue="email@email.com"
         android:selectAllOnFocus="true"
         android:singleLine="true"
-        android:title="SET BACKGROUND"
-        android:key="set_background" />
+        android:title="YOUR EMAIL"
+        android:key="usernameET" />
+    <EditTextPreference
+        android:defaultValue="password"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="YOUR PASSWORD"
+        android:key="passwordkey" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:title="SHOW LOGIN BUTTON"
+        android:key="showLoginBtn" />
+
+    <Preference android:title="exit"
+        android:key="exitBtn"></Preference>
 </PreferenceScreen>
