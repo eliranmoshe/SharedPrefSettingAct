@@ -38,6 +38,7 @@ public class setting extends PreferenceActivity {
                 if (!email.contains("@"))
                 {
                     Toast.makeText(setting.this, "incorrect email", Toast.LENGTH_SHORT).show();
+                    return false;
                 }
                 else {
                     Toast.makeText(setting.this, "saved email", Toast.LENGTH_SHORT).show();
@@ -53,6 +54,7 @@ public class setting extends PreferenceActivity {
                 if (password.toCharArray().length<8)
                 {
                     Toast.makeText(setting.this, "incorrect password", Toast.LENGTH_SHORT).show();
+                    return false;
                 }
                 else
                 {
@@ -69,22 +71,5 @@ public class setting extends PreferenceActivity {
 
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
 
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String email = preferences.getString("usernameET", "email@email.com");
-        if (!email.contains("@"))
-        {
-            preferences.edit().putString("usernameET","email@email.com").commit();
-        }
-        String password=preferences.getString("passwordkey","12345678");
-        if (password.toCharArray().length<8)
-        {
-            preferences.edit().putString("passwordkey","12345678").commit();
-        }
-
-
-    }
 }
