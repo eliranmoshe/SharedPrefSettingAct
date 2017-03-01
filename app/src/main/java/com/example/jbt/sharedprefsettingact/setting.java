@@ -7,6 +7,8 @@ import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 /**
@@ -37,6 +39,9 @@ public class setting extends PreferenceActivity {
                 {
                     Toast.makeText(setting.this, "incorrect email", Toast.LENGTH_SHORT).show();
                 }
+                else {
+                    Toast.makeText(setting.this, "saved email", Toast.LENGTH_SHORT).show();
+                }
                 return true;
             }
         });
@@ -49,9 +54,14 @@ public class setting extends PreferenceActivity {
                 {
                     Toast.makeText(setting.this, "incorrect password", Toast.LENGTH_SHORT).show();
                 }
+                else
+                {
+                    Toast.makeText(setting.this, "saved password", Toast.LENGTH_SHORT).show();
+                }
                 return true;
             }
         });
+
 
 
 
